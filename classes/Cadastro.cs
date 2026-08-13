@@ -6,6 +6,8 @@ namespace sistema_cadastro_squad.classes
 {
     internal class Cadastro
     {
+
+        
         public void CadastrarAluno(string[] nome, int[] idade, int quantAlunos, double[] nota1, double[] nota2)
         {
 
@@ -45,6 +47,6 @@ namespace sistema_cadastro_squad.classes
             Console.WriteLine(" ");
 
             }
-        }
+        
     }
 }
