@@ -18,10 +18,11 @@ namespace sistema_cadastro_squad.classes
             string resposta = Console.ReadLine();
 
             bool desejaCadastrar = resposta.ToLower() == "s";
+
             if(desejaCadastrar != true)
 
             {
-                Console.WriteLine(" ");
+                Console.WriteLine("\nEncerrando...");
                 return;
             }
 
