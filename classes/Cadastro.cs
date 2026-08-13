@@ -6,27 +6,9 @@ namespace sistema_cadastro_squad.classes
 {
     internal class Cadastro
     {
-        public void CadastrarAluno() 
+        public void CadastrarAluno(string[] nome, int[] idade,int quantAlunos, double[] nota1, double[] nota2 ) 
         { 
 
-            string[] nome = new string[10];
-            int[] idade = new int[10];
-            double[] nota1 = new double[10];
-            double[] nota2 = new double[10];
-
-            Console.WriteLine("Você deseja cadastrar algum aluno? (s/n)");
-            string resposta = Console.ReadLine();
-
-            bool desejaCadastrar = resposta.ToLower() == "s";
-            if(desejaCadastrar != true)
-
-            {
-                Console.WriteLine(" ");
-                return;
-            }
-
-            Console.WriteLine("Quantos alunos você deseja cadastrar? ");
-            int quantAlunos = Convert.ToInt32(Console.ReadLine());
 
             if (quantAlunos > 10)
             {
