@@ -6,37 +6,18 @@ namespace sistema_cadastro_squad.classes
 {
     internal class Cadastro
     {
-        public void CadastrarAluno() 
-        { 
-
-            string[] nome = new string[10];
-            int[] idade = new int[10];
-            double[] nota1 = new double[10];
-            double[] nota2 = new double[10];
-
-            Console.WriteLine("Você deseja cadastrar algum aluno? (s/n)");
-            string resposta = Console.ReadLine();
-
-            bool desejaCadastrar = resposta.ToLower() == "s";
-
-            if(desejaCadastrar != true)
-
-            {
-                Console.WriteLine("\nEncerrando...");
-                return;
-            }
-
-            Console.WriteLine("Quantos alunos você deseja cadastrar? ");
-            int quantAlunos = Convert.ToInt32(Console.ReadLine());
+        
+        public void CadastrarAluno(string[] nome, int[] idade, int quantAlunos, double[] nota1, double[] nota2)
+        {
 
             if (quantAlunos > 10)
             {
-                Console.WriteLine("Você só pode cadastrar até 10 alunos.");
+                Console.WriteLine("\nVocê só pode cadastrar até 10 alunos.");
             }
 
             else if (quantAlunos <= 0)
             {
-                Console.WriteLine("Você deve cadastrar pelo menos 1 aluno.");
+                Console.WriteLine("\nVocê deve cadastrar pelo menos 1 aluno.");
             }
 
             else
@@ -44,28 +25,25 @@ namespace sistema_cadastro_squad.classes
 
                 for (int i = 0; i < quantAlunos; i++)
                 {
-                    Console.Write("Digite o nome do aluno: ");
+                    Console.Write("\nNome do aluno: ");
                     nome[i] = Console.ReadLine();
 
-                    Console.Write("Digite a idade do aluno: ");
+                    Console.Write("Idade do aluno: ");
                     idade[i] = Convert.ToInt32(Console.ReadLine());
 
-                    Console.Write("Digite a primeira nota: ");
+                    Console.Write("Primeira nota: ");
                     nota1[i] = Convert.ToDouble(Console.ReadLine());
 
-                    Console.Write("Digite a segunda nota: ");
+                    Console.Write("Segunda nota: ");
                     nota2[i] = Convert.ToDouble(Console.ReadLine());
-
-                    Console.WriteLine(" ");
 
                 }
 
-                Console.WriteLine(" ");
-                Console.WriteLine("~~Cadastro Concluído!~~");
-                Console.WriteLine(" ");
+                Console.WriteLine("\nCadastro concluído!\n");
 
             }
-        }
-    }
 
+        }
+        
+    }
 }
